@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import environ
 import os
 from pathlib import Path
-import mysql.connector.django
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -86,7 +85,7 @@ WSGI_APPLICATION = 'alx_travel_app.wsgi.application'
 # Database configuration using environment variables
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': env('DB_NAME'),
         'USER': env('DB_USER'),
         'PASSWORD': env('DB_PASSWORD'),
